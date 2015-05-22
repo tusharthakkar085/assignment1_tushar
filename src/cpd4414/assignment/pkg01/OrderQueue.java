@@ -46,5 +46,34 @@ public class OrderQueue {
             }
         }
     
+    public Order next(){
+        return orderque.peek();
+    }
+    
+    
+    public class NoTimeReceived extends Exception {
 
+        public NoTimeReceived() {
+            super("No Time Received on this Order");
+        }
+    }
+
+    public class NoTimeProcessed extends Exception {
+
+        public NoTimeProcessed() {
+            super("No Time Processed on this Order");
+        }
+    }
+    
+    void process(Order next)throws NoTimeReceived{
+        if(next.equals(next())){
+            
+                orderList.add(orderque.remove());
+                next.setTimeProcessed(new Date());
+            }
+        else if(next.getTimeReceived()==null){
+        throw new NoTimeReceived();
+            }
 }
+        }
+
