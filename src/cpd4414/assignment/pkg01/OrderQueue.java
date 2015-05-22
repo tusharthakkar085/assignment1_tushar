@@ -22,12 +22,12 @@ public class OrderQueue {
     Queue<Order> orderque = new ArrayDeque();
     List<Order> orderList = new ArrayList();
     
-    public void add(Order order) throws CustException {
+    public void add(Order order) throws CustException, PurchaseException {
         if(order.getCustomerId().isEmpty() && order.getCustomerName().isEmpty()){
-        throws new CustException();
+        throw new CustException();
         }
-        if(order.getPurchaseList().isEmpty()){
-        throws new PurchaseException();
+        if(order.getListOfPurchases().isEmpty()){
+        throw new PurchaseException();
         }
     }
 
