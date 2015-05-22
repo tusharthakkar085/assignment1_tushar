@@ -88,6 +88,7 @@ public class Order {
     }
 
   //---------------------------------------------------------------
+
     
      public List<Purchase> getListOfPurchases() {
         return listOfPurchases;
