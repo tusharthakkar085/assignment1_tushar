@@ -20,8 +20,7 @@ public class CPD4414Assignment01 {
         
         
          
-         System.out.println("Rama here...");
-         System.out.println("jay");
+         
     }
     
 }
