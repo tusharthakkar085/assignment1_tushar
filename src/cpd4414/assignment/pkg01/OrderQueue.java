@@ -25,15 +25,21 @@ public class OrderQueue {
     public void add(Order order) throws CustException {
         if(order.getCustomerId().isEmpty() && order.getCustomerName().isEmpty()){
         throws new CustException();
+        }
+        if(order.getPurchaseList().isEmpty()){
+        throws new PurchaseException();
+        }
     }
+
 
     public class CustException extends Exception {
 
         public CustException() {
-            super("No Customer Provided.");
+            super("No Purchase.");
         }
     }
-    
+        
+
     
 
 }
