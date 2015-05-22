@@ -35,11 +35,16 @@ public class OrderQueue {
     public class CustException extends Exception {
 
         public CustException() {
-            super("No Purchase.");
+            super("No Customer.");
         }
     }
         
+    public class PurchaseException extends Exception {
 
+            public PurchaseException() {
+                super("No Purchase.");
+            }
+        }
     
 
 }
